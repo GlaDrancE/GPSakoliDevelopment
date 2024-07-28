@@ -1,0 +1,207 @@
+/* Home Media query */
+@media only screen and (max-width: 1019px) {
+    .home-container {
+        width: 95%;
+    }
+
+    /* Slider Media Query */
+    .logo img {
+        width: 4rem;
+    }
+
+    .logo .clg-name {
+        font-size: 1.6rem;
+    }
+
+    .logo-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-header .header-location {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo-header .header-location svg {
+        width: 5%;
+    }
+
+    .slider-nav>ul>div {
+        display: none;
+    }
+
+    .main-slider .swiper-button-prev::after,
+    .main-slider .swiper-button-next::after {
+        display: none;
+    }
+
+    .Slider-content {
+        width: 100%;
+    }
+
+    .Slider-content .slide-title {
+        font-size: var(--x2-heading);
+    }
+
+    .mobile-menu,
+    .mobile-home {
+        display: block;
+    }
+
+    .clg-about {
+        grid-template-columns: 1fr;
+    }
+
+    .principal-message-container {
+        grid-template-columns: 100%;
+    }
+
+    .news-paper-card {
+        width: 100%;
+    }
+
+    .dynamic-container {
+        display: block;
+    }
+
+    .main-container {
+        width: 95%;
+    }
+
+    .main-menu {
+        position: fixed;
+        top: 0;
+        background: #ffecef;
+        right: -100%;
+        width: 240px;
+        height: 100vh;
+        transition: all .4s ease-out;
+        z-index: 999;
+        overflow: auto;
+    }
+
+    .inner-main-menu {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .department-slider-container .polygon:nth-of-type(1) {
+        height: 30%;
+    }
+
+    .department-slider-container .polygon:nth-of-type(2) {
+        height: 40%;
+    }
+
+    .department-slider-container .polygon:nth-of-type(3) {
+        height: 60%;
+    }
+
+    .footer-container {
+        width: 95% !important;
+    }
+    .footer-container img {
+        right: 0 !important;
+    }
+
+    .clg-about {
+        transform: translateY(-2%);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .header-location {
+        display: none;
+    }
+
+    .phone-email {
+        display: none;
+    }
+
+    .main-slider {
+        height: 50vh;
+    }
+
+    .logo img {
+        width: 2.4rem;
+    }
+    .header-comp {
+        z-index: unset;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 450px) {
+
+    /* Slider Media Query */
+    .main-slider {
+        height: 40vh;
+    }
+
+    .logo img {
+        width: 2.4rem;
+    }
+
+    .logo .clg-name {
+        display: none;
+    }
+
+    .logo-header {
+        padding: 1rem .5rem;
+    }
+
+    .slide-title h1 {
+        font-size: 1.6rem;
+    }
+
+
+
+    .department-slider-container .polygon {
+        display: none;
+    }
+
+    .department-slider-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .3;
+        background: url(./images/branch-background.jpg) center / cover no-repeat;
+    }
+
+    .department-heading h1,
+    .department-heading h2,
+    .about-department-container h1 {
+        font-size: var(--larger-heading);
+    }
+
+    .curriculum-card>a:nth-child(1) {
+        width: 100%;
+        height: 50px;
+    }
+
+    .curriculum-card {
+        width: 100%;
+        height: 50px;
+        margin: 2rem 0;
+    }
+
+    .curriculum-card-connect,
+    .curriculum-connect {
+        display: none;
+    }
+
+    .principal-profile img {
+        width: 100px;
+        height: 100px;
+    }
+    .heading{
+        font-size: var(--larger-heading);
+    }
+}
