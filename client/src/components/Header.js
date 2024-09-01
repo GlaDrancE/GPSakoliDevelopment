@@ -195,7 +195,7 @@ export default function Header() {
                         </lord-icon>
 
                         <p className="college-address mx-4">
-                            Government Polytechnic, Sakoli Sendurwafa Sakoli, Maharashtra 441802
+                            Government Polytechnic, Sakoli Sendurwafa Sakoli, Maharashtra 441802 
                         </p>
                     </div>
                 </div>

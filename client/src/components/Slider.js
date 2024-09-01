@@ -22,6 +22,7 @@ import image6 from '../images/c5.jpg'
 import image7 from '../images/c6.jpg'
 import image8 from '../images/c7.jpg'
 import image9 from '../images/c8.jpg'
+import image10 from '../images/c9.jpg'
 
 
 
@@ -52,6 +53,7 @@ import polygon_3 from '../images/Polygon-3.png'
 // Hamburger Icon
 // import hamburger from '../images/icons/hamburger.png'
 const images = [
+  
   {
     src: image1, alt: 'First Image', msg: 'Welcome to Government Polytechnic Sakoli'
   },
@@ -60,9 +62,10 @@ const images = [
   // { src: image4, alt: 'Fourth Image', msg: '' },
   { src: image5, alt: 'Fifth Image', msg: '' },
   { src: image6, alt: 'Sixth Image', msg: '' },
-  { src: image7, alt: 'Seventh Image', msg: 'Industrial Visit At Clicknet' },
+  { src: image7, alt: 'Seventh Image',  msg: 'Industrial Visit At Clicknet' },
   { src: image8, alt: 'Eight Image', msg: '' },
   { src: image9, alt: 'Ninth Image', msg: 'Fire Safty Training By Expert' },
+  { src: image10, alt: 'Ninth Image', msg: 'expart lecture' },
 ]
 
 
@@ -109,7 +112,17 @@ export function Slider() {
           modules={[EffectFade, Navigation, Pagination, Autoplay]}
           className="mySwiper"
         >
-         
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <img src={image.src} width={'100%'} />
+              <div className='Slider-content text-white'>
+                <div className="slide-title text-center w-full">
+                  <h1 className='slide-left'>{image.msg}</h1>
+                </div>
+
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </>
@@ -141,7 +154,7 @@ export function News_slider() {
         {
           newses.map((news) => (
             <SwiperSlide>
-              <img src={news.src} alt="next" />
+              <img src={news.src} alt="" />
             </SwiperSlide>
           ))
         }
