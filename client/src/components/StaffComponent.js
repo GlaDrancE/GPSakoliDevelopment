@@ -19,7 +19,7 @@ export default function StaffComponent(props) {
               <li>Qualification : {props.staffimages.qualification}</li>
               <li>Experience : {props.staffimages.TeachingExperience} Years</li>
               <li>Contact No. : {props.staffimages.contact}</li>
-              <li>meet {props.staffimages.email}</li>
+              <li>Email : {props.staffimages.email}</li>
             </ul>
           </div>
         </div>
