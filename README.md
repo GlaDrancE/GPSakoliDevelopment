@@ -246,53 +246,58 @@ Password: admin123
 
 ```
 GPSakoliDevelopment/
-├── frontend/                   # React frontend application
-│   ├── public/                 # Static assets
+├── frontend/                     # React frontend application
+│   ├── public/                   # Static assets
 │   ├── src/
-│   │   ├── assets/            # Images, fonts, etc.
-│   │   ├── components/        # Reusable React components
-│   │   │   ├── common/        # Shared components
-│   │   │   ├── layout/        # Layout components
-│   │   │   └── pages/         # Page-specific components
-│   │   ├── pages/             # Route pages
-│   │   ├── services/          # API service functions
-│   │   ├── utils/             # Utility functions
-│   │   ├── styles/            # Global styles
-│   │   ├── App.jsx            # Main App component
-│   │   └── main.jsx           # Entry point
-│   ├── .env.example           # Environment variables template
-│   ├── package.json           # Frontend dependencies
-│   ├── vite.config.js         # Vite configuration
-│   └── tailwind.config.js     # Tailwind CSS configuration
+│   │   ├── assets/               # Images, fonts, etc.
+│   │   ├── components/
+│   │   │   ├── common/           # Shared components
+│   │   │   ├── layout/           # Layout components
+│   │   │   └── pages/            # Page-specific components
+│   │   ├── pages/                # Routes
+│   │   ├── services/             # API service functions
+│   │   ├── utils/                # Utilities
+│   │   ├── styles/               # CSS/tailwind/global styles
+│   │   ├── App.jsx               # Main app component
+│   │   └── main.jsx              # Entry point
+│   ├── .env.example              # Template env file
+│   ├── package.json              # Frontend dependencies
+│   ├── vite.config.js            # Vite config
+│   └── tailwind.config.js        # Tailwind config
 │
-├── backend/                    # PHP backend application
-│   ├── api/                   # API endpoints
-│   │   ├── auth/              # Authentication endpoints
-│   │   ├── content/           # Content management endpoints
-│   │   ├── media/             # Media upload/management
-│   │   └── public/            # Public API endpoints
-│   ├── config/                # Configuration files
-│   │   ├── database.php       # Database connection
-│   │   └── config.php         # General configuration
-│   ├── includes/              # Shared PHP files
-│   │   ├── functions.php      # Utility functions
-│   │   └── auth.php           # Authentication helpers
-│   ├── models/                # Database models
-│   ├── uploads/               # Uploaded files directory
-│   │   ├── images/            # Image uploads
-│   │   └── documents/         # PDF uploads
-│   └── database/              # Database files
-│       ├── schema.sql         # Database schema
-│       └── seeds.sql          # Sample data
+├── backend/                      # PHP backend API
+│   ├── api/                      # API endpoint groups
+│   │   ├── auth/                 # Authentication endpoints
+│   │   ├── content/              # Content management endpoints
+│   │   ├── media/                # Media upload/management
+│   │   └── public/               # Public API endpoints
+│   │
+│   ├── config/                   # Configuration files
+│   │   ├── database.php          # DB connection
+│   │   └── config.php            # General config
+│   │
+│   ├── includes/                 # Shared PHP includes
+│   │   ├── functions.php         # Utility functions
+│   │   └── auth.php              # Authentication helpers
+│   │
+│   ├── models/                   # Database model classes
+│   │
+│   ├── uploads/                  # Uploaded files
+│   │   ├── images/               # Image uploads
+│   │   └── documents/            # PDF/document uploads
+│   │
+│   └── database/                 # Database SQL files
+│       ├── schema.sql            # Schema for DB
+│       └── seeds.sql             # Sample data
 │
-├── docs/                       # Documentation
-│   ├── API.md                 # API documentation
-│   ├── DEPLOYMENT.md          # Deployment guide
-│   └── CONTRIBUTING.md        # Contribution guidelines
+├── docs/                         # Documentation
+│   ├── API.md                    # API documentation
+│   ├── DEPLOYMENT.md             # Deployment guide
+│   └── CONTRIBUTING.md           # Contributing guidelines
 │
-├── .gitignore                 # Git ignore file
-├── LICENSE                    # Project license
-└── README.md                  # This file
+├── .gitignore                    # Git ignore rules
+├── LICENSE                       # MIT License
+└── README.md                     # Project overview + this directory structure
 ```
 
 ---
@@ -358,79 +363,6 @@ The admin dashboard provides comprehensive content management capabilities:
 Production: https://gpsakoli.ac.in/api
 Development: http://localhost/gpsakoli/api
 ```
-
-### Authentication
-All protected endpoints require JWT token in Authorization header:
-```
-Authorization: Bearer <your_jwt_token>
-```
-
-### Key Endpoints
-
-#### Public Endpoints
-```http
-GET    /api/pages/{slug}              # Get page content
-GET    /api/announcements             # List announcements
-GET    /api/faculty                   # Get faculty list
-GET    /api/courses                   # Get course information
-GET    /api/gallery                   # Get gallery albums
-POST   /api/contact                   # Submit contact form
-```
-
-#### Admin Endpoints (Protected)
-```http
-POST   /api/auth/login                # Admin login
-POST   /api/auth/logout               # Admin logout
-GET    /api/auth/verify               # Verify token
-
-POST   /api/content/create            # Create content
-PUT    /api/content/update/{id}       # Update content
-DELETE /api/content/delete/{id}       # Delete content
-
-POST   /api/media/upload              # Upload file
-GET    /api/media/list                # List media files
-DELETE /api/media/delete/{id}         # Delete media
-
-GET    /api/stats                     # Get statistics
-```
-
-For detailed API documentation, see [API.md](docs/API.md)
-
----
-
-## 🤝 Contributing
-
-We welcome contributions to improve the Government Polytechnic Sakoli website! Here's how you can help:
-
-### How to Contribute
-
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-3. **Commit your changes**
-   ```bash
-   git commit -m 'Add some AmazingFeature'
-   ```
-4. **Push to the branch**
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-5. **Open a Pull Request**
-
-### Contribution Guidelines
-
-- Follow the existing code style and conventions
-- Write clear commit messages
-- Update documentation for new features
-- Add tests for new functionality
-- Ensure all tests pass before submitting PR
-
-### Code of Conduct
-
-Please be respectful and constructive in all interactions. We are committed to providing a welcoming and inclusive environment.
-
 ---
 
 ## 📄 License
@@ -444,11 +376,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Government Polytechnic Sakoli**
 - Website: [gpsakoli.ac.in](https://gpsakoli.ac.in/)
 - Email: principal@gpsakoli.ac.in
-- Phone: [Your Phone Number]
 
 **Development Team**
 - GitHub: [@GlaDrancE](https://github.com/GlaDrancE)
 - Project Link: [https://github.com/GlaDrancE/GPSakoliDevelopment](https://github.com/GlaDrancE/GPSakoliDevelopment)
+- Phone: +91 9049606217
 
 ---
 
@@ -456,7 +388,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Government Polytechnic Sakoli administration and staff
 - All contributors who have helped improve this project
-- Open source community for the amazing tools and libraries
 
 ---
 
