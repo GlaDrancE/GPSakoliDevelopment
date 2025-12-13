@@ -246,58 +246,15 @@ Password: admin123
 
 ```
 GPSakoliDevelopment/
-├── frontend/                     # React frontend application
-│   ├── public/                   # Static assets
-│   ├── src/
-│   │   ├── assets/               # Images, fonts, etc.
-│   │   ├── components/
-│   │   │   ├── common/           # Shared components
-│   │   │   ├── layout/           # Layout components
-│   │   │   └── pages/            # Page-specific components
-│   │   ├── pages/                # Routes
-│   │   ├── services/             # API service functions
-│   │   ├── utils/                # Utilities
-│   │   ├── styles/               # CSS/tailwind/global styles
-│   │   ├── App.jsx               # Main app component
-│   │   └── main.jsx              # Entry point
-│   ├── .env.example              # Template env file
-│   ├── package.json              # Frontend dependencies
-│   ├── vite.config.js            # Vite config
-│   └── tailwind.config.js        # Tailwind config
-│
-├── backend/                      # PHP backend API
-│   ├── api/                      # API endpoint groups
-│   │   ├── auth/                 # Authentication endpoints
-│   │   ├── content/              # Content management endpoints
-│   │   ├── media/                # Media upload/management
-│   │   └── public/               # Public API endpoints
-│   │
-│   ├── config/                   # Configuration files
-│   │   ├── database.php          # DB connection
-│   │   └── config.php            # General config
-│   │
-│   ├── includes/                 # Shared PHP includes
-│   │   ├── functions.php         # Utility functions
-│   │   └── auth.php              # Authentication helpers
-│   │
-│   ├── models/                   # Database model classes
-│   │
-│   ├── uploads/                  # Uploaded files
-│   │   ├── images/               # Image uploads
-│   │   └── documents/            # PDF/document uploads
-│   │
-│   └── database/                 # Database SQL files
-│       ├── schema.sql            # Schema for DB
-│       └── seeds.sql             # Sample data
-│
-├── docs/                         # Documentation
-│   ├── API.md                    # API documentation
-│   ├── DEPLOYMENT.md             # Deployment guide
-│   └── CONTRIBUTING.md           # Contributing guidelines
-│
-├── .gitignore                    # Git ignore rules
-├── LICENSE                       # MIT License
-└── README.md                     # Project overview + this directory structure
+├── client/
+│   ├── (frontend source files — React/Vite app?)
+│   ├── ...
+│   └── (all client code)
+├── server/
+│   └── api/
+│       ├── (server API source files)
+│       └── ...
+├── README.md
 ```
 
 ---
